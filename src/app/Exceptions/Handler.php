@@ -83,7 +83,10 @@ class Handler extends ExceptionHandler
             return $this->httpException($exception);
         }
         if ($exception instanceof QueryException){
-            return $this->queryException($exception);
+            $errorCode = $exception->errorInfo[1];
+            if($errorCode == 1451) {
+                return $this->queryException();
+            }
         }
         if(config('app.debug')){
             return parent::render($request, $exception);
@@ -128,13 +131,9 @@ class Handler extends ExceptionHandler
         return $this->errorResponse($exception->getMessage(), $exception->getStatusCode());
     }
 
-    private function queryException(QueryException $exception)
+    private function queryException()
     {
-        $errorCode = $exception->errorInfo[1];
-
-        if($errorCode == 1451){
-            return $this->errorResponse('Cannot remove this resource permanently. '
-                . 'It is related with any other resource', 409);
-        }
+        return $this->errorResponse('Cannot remove this resource permanently. '
+            . 'It is related with any other resource', 409);
     }
 }
