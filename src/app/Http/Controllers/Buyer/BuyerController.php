@@ -4,14 +4,14 @@ namespace App\Http\Controllers\Buyer;
 
 use App\Buyer;
 use App\Http\Controllers\ApiController;
-use Illuminate\Http\Request;
+use Illuminate\Http\JsonResponse;
 
 class BuyerController extends ApiController
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return JsonResponse
      */
     public function index()
     {
@@ -25,7 +25,7 @@ class BuyerController extends ApiController
      * Display the specified resource.
      *
      * @param Buyer $buyer
-     * @return \Illuminate\Http\Response
+     * @return JsonResponse
      */
     public function show(Buyer $buyer)
     {

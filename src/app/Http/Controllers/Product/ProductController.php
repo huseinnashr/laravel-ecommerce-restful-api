@@ -4,14 +4,14 @@ namespace App\Http\Controllers\Product;
 
 use App\Http\Controllers\ApiController;
 use App\Product;
-use Illuminate\Http\Request;
+use Illuminate\Http\JsonResponse;
 
 class ProductController extends ApiController
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return JsonResponse
      */
     public function index()
     {
@@ -24,7 +24,7 @@ class ProductController extends ApiController
      * Display the specified resource.
      *
      * @param Product $product
-     * @return void
+     * @return JsonResponse
      */
     public function show(Product $product)
     {

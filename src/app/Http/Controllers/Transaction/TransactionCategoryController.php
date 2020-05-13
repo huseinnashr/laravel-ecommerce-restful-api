@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Transaction;
 
 use App\Http\Controllers\ApiController;
 use App\Transaction;
+use Illuminate\Http\JsonResponse;
 
 class TransactionCategoryController extends ApiController
 {
@@ -11,7 +12,7 @@ class TransactionCategoryController extends ApiController
      * Display a listing of the resource.
      *
      * @param Transaction $transaction
-     * @return \Illuminate\Http\JsonResponse
+     * @return JsonResponse
      */
     public function index(Transaction $transaction)
     {

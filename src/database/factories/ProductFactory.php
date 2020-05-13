@@ -1,10 +1,11 @@
 <?php
 
-/** @var \Illuminate\Database\Eloquent\Factory $factory */
+/** @var Factory $factory */
 
 use App\Product;
 use App\User;
 use Faker\Generator as Faker;
+use Illuminate\Database\Eloquent\Factory;
 
 $factory->define(Product::class, function (Faker $faker) {
     return [

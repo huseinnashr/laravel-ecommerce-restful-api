@@ -4,14 +4,14 @@ namespace App\Http\Controllers\Transaction;
 
 use App\Http\Controllers\ApiController;
 use App\Transaction;
-use Illuminate\Http\Request;
+use Illuminate\Http\JsonResponse;
 
 class TransactionController extends ApiController
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return JsonResponse
      */
     public function index()
     {
@@ -24,7 +24,7 @@ class TransactionController extends ApiController
      * Display the specified resource.
      *
      * @param Transaction $transaction
-     * @return void
+     * @return JsonResponse
      */
     public function show(Transaction $transaction)
     {
