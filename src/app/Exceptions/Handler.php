@@ -128,7 +128,8 @@ class Handler extends ExceptionHandler
 
     private function httpException(HttpException $exception)
     {
-        return $this->errorResponse($exception->getMessage(), $exception->getStatusCode());
+        return $this->errorResponse($exception->getMessage(), $exception->getStatusCode())
+            ->withHeaders($exception->getHeaders());
     }
 
     private function queryException()
