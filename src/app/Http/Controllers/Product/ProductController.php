@@ -8,6 +8,7 @@ use Illuminate\Http\JsonResponse;
 
 class ProductController extends ApiController
 {
+
     /**
      * Display a listing of the resource.
      *

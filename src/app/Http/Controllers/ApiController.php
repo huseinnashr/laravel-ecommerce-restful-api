@@ -7,4 +7,9 @@ use App\Traits\ApiResponder;
 class ApiController extends Controller
 {
     use ApiResponder;
+
+    public function __construct()
+    {
+
+    }
 }

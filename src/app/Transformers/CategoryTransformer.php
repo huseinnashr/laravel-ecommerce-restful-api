@@ -18,7 +18,7 @@ class CategoryTransformer extends TransformerAbstract
         return [
             'identifier' => (int)$category->id,
             'title' => (string)$category->name,
-            'detail' => (string)$category->description,
+            'details' => (string)$category->description,
             'creationDate' => (string)$category->created_at,
             'lastChange' => (string)$category->updated_at,
             'deletedDate' => isset($category->deleted_at) ? (string)$category->deleted_at : NULL,
@@ -53,6 +53,20 @@ class CategoryTransformer extends TransformerAbstract
             'creationDate' => 'created_at',
             'lastChange' => 'updated_at',
             'deletedDate' => 'deleted_at',
+        ];
+
+        return isset($attributes[$index]) ? $attributes[$index] : null;
+    }
+
+    public static function transformedAttribute($index)
+    {
+        $attributes = [
+            'id' => 'identifier',
+            'name' => 'title',
+            'description' => 'details',
+            'created_at' => 'creationDate',
+            'updated_at' => 'lastChange',
+            'deleted_at' => 'deletedDate',
         ];
 
         return isset($attributes[$index]) ? $attributes[$index] : null;
