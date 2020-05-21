@@ -7,6 +7,7 @@ use App\Product;
 use App\Seller;
 use App\Transformers\ProductTransformer;
 use App\User;
+use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -21,6 +22,8 @@ class SellerProductController extends ApiController
 
         $this->middleware('transform.input:' . ProductTransformer::class)
             ->only(['store', 'update']);
+        $this->middleware('scope:manage-products')->except(['index']);
+        $this->middleware('scope:manage-products,read-general')->only(['index']);
     }
 
     /**
