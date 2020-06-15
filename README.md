@@ -2,7 +2,7 @@
 
 ## What is this
 
-This is an exercise project by following [RESTful API with Laravel](https://www.udemy.com/course/restful-api-with-laravel-php-homestead-passport-hateoas/) course ([the repo](https://github.com/JuanDMeGon/RESTful-API-with-Laravel-Definitive-Guide)) with some diffrences.
+This is an course work by following [RESTful API with Laravel](https://www.udemy.com/course/restful-api-with-laravel-php-homestead-passport-hateoas/) course ([the repo](https://github.com/JuanDMeGon/RESTful-API-with-Laravel-Definitive-Guide)) with some diffrences.
 
 ## What's this cover
 
@@ -13,7 +13,7 @@ Validation - Error Handling - Middlewares - Passport and Scopes - Policy - Gate
 
 ### Docker instead of Vagrant
 
-I was using [docker-compose-laravel](https://github.com/aschmelyun/docker-compose-laravel) for the development environment instead of vagrant. With that setup, i didn't need to install dev app (such as artisan or composer) on my local machine making the project more organize and can be run anywhere (with docker). Docker also faster than vagrant.
+I was using [docker-compose-laravel](https://github.com/aschmelyun/docker-compose-laravel) for the development environment instead of vagrant. With that setup, i didn't need to install dev app (such as artisan or composer) on my local machine making the project more organized and can be run anywhere (with docker). Docker also run faster than vagrant.
 
 ### Laravel 7
 
