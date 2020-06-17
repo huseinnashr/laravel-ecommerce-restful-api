@@ -28,6 +28,6 @@ This is an e-commerce backend which include buyer, seller, product, category and
 ### How to run
 
 1. Download docker
-2. Run `docker-compose run -d --build` to build and run the container in detach mode.
+2. Run `docker-compose up -d --build` to build and run the container in detach mode.
 3. Run `docker-compose run --rm artisan migrate:refresh --seed` to migrate & seed the database.
 4. The system should be running on `localhost:8080`
